@@ -1,0 +1,6 @@
+description = "Generate a template for a code review comment."
+prompt = """
+> git diff
+Based on the diff above, I need to leave a code review comment about "{{arg1}}".
+Please draft a polite and constructive comment that explains the issue and suggests a potential improvement.
+"""

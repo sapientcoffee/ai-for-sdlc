@@ -1,0 +1,5 @@
+description = "Get a high-level summary of the changes in the current branch."
+prompt = """
+> git diff --unified=0
+Based on the diff above, provide a high-level summary of the changes.
+"""

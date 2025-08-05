@@ -1,0 +1,10 @@
+# This file marks the directory as a Gemini CLI extension.
+
+# The name of the extension.
+name = "conventional-commit-helper"
+
+# The version of the extension.
+version = "0.1.0"
+
+# A short description of the extension.
+description = "An extension to help generate Conventional Commit messages."

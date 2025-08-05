@@ -1,0 +1,7 @@
+description = "Reviews your staged code changes against the project's style guide."
+prompt = """
+> cat .gemini/styleguide.md
+> git diff --staged
+You are a senior software engineer performing a pre-flight code review. Your task is to check the staged code changes (the second block of text) against our project's style guide (the first block of text).
+Please list any violations you find. If there are no violations, simply say "No violations found."
+"""

@@ -1,0 +1,10 @@
+description = "Check the code in the current branch for common issues."
+prompt = """
+> git diff
+You are a senior software engineer performing a code review. Analyze the diff above and check for the following common issues:
+- Are there any obvious bugs or logic errors?
+- Is the code well-documented with comments and docstrings?
+- Are there corresponding unit tests for the new code?
+- Are variable and function names clear and self-explanatory?
+Provide your feedback in a bulleted list.
+"""
