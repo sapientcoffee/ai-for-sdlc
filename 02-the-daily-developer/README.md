@@ -47,6 +47,13 @@ For the most advanced commands, use a `.toml` file to add a description, which w
     - /plan: > .gemini/prompts/plan.toml
     ```
 
+---
+## Advanced Example: A Structured System Prompt
+
+For a more detailed look at how to structure a complex system prompt with personas, rules, and few-shot examples, check out our advanced guide.
+
+➡️ **[View the Structured System Prompt Example](./structured-prompt-example.md)**
+
 
 ## Examples
 
