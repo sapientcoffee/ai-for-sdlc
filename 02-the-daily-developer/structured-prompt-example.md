@@ -1,6 +1,6 @@
 # Advanced Example: A Structured System Prompt
 
-This file demonstrates a more advanced, structured approach to writing a `GEMINI.md` file, inspired by the techniques in [this article by Daniela Petruzalek](https://danicat.dev/posts/20250715-gemini-cli-system-prompt/).
+<!-- This file demonstrates a more advanced, structured approach to writing a `GEMINI.md` file, inspired by the techniques in [this article by Daniela Petruzalek](https://danicat.dev/posts/20250715-gemini-cli-system-prompt/). -->
 
 A structured prompt like this is incredibly powerful for guiding the AI to produce consistent, high-quality output for a specific task.
 
