@@ -27,7 +27,20 @@ Think of it as a cheat sheet for the AI. Here are some great things to put into 
 *   **Solutions to Common Model Failures:** If you notice Gemini making a recurring mistake, you can add a directive to correct it.
     *   *Example:* `When writing a new test, always import 'pytest' at the top of the file.`
 
-**Pro-Tip:** You can ask Gemini CLI to help you create this file! 
+---
+
+## Don't Write It, Generate It! 🚀 (The `/init` command)
+
+Manually creating a `GEMINI.md` file is great, but what if you could get a running start? That's where the `/init` command comes in.
+
+This magical command will:
+1.  **Read your project files:** It scans your `README`, your source code, and your dependency files (`pyproject.toml`, `package.json`, etc.).
+2.  **Analyze the contents:** It identifies the project's purpose, the primary language, the key frameworks, and the commands used to build and run it.
+3.  **Generate a `GEMINI.md` file:** It creates a tailored, project-specific `GEMINI.md` file that summarizes everything it learned.
+
+This gives you an amazing starting point for your System Prompt. It's like having an AI assistant do the initial project orientation *for* you. You can then take the generated file and tweak it to add your own specific rules and personality.
+
+It's the ultimate way to bootstrap your project's "digital soul."
 
 ---
 
