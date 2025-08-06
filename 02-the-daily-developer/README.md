@@ -46,3 +46,9 @@ For the most advanced commands, use a `.toml` file to add a description, which w
     ```markdown
     - /plan: > .gemini/prompts/plan.toml
     ```
+
+
+## Examples
+
+GEMINI.md
+The `GEMINI-TRACKING.md` file contains a robust logging protocol inspired by [Aaron Wanjala](https://medium.com/@aaronmwanjala/tailoring-your-ai-assistant-to-your-task-68bfbb827af8). It creates a transparent, auditable trail of the steps Gemini CLI takes to fulfill requests. This allows the agent to be interrupted—by quota restrictions, the end of the workday, etc.—and then pick up right where it left off, which is especially helpful for long-running, complex tasks.
