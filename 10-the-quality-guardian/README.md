@@ -129,7 +129,73 @@ This approach provides a clean, containerized way to add an automated Gemini rev
 
 ---
 
+## Official GitHub Action for Automated Reviews 🚀
+
+For projects hosted on GitHub, there is now an even easier and more integrated way to automate code reviews: the official **Gemini CLI GitHub Action**.
+
+As announced in the [official Google for Developers blog post](https://blog.google/technology/developers/introducing-gemini-cli-github-actions/), this action allows you to run Gemini CLI directly within your workflow, making automated PR reviews a first-class citizen in your development process.
+
+### How It Works
+
+You can create a workflow that triggers on every pull request. The workflow will:
+1.  Check out the code.
+2.  Use the `google-github-actions/run-gemini-cli` action to execute a prompt.
+3.  The prompt will ask Gemini to review the code changes.
+4.  The output of the review is then posted back to the pull request as a comment.
+
+### Example Workflow (`.github/workflows/gemini-review.yml`)
+
+```yaml
+name: Gemini AI Code Review
+on:
+  pull_request:
+
+jobs:
+  gemini_code_review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history for diffing
+
+      - name: Get PR Diff
+        id: pr_diff
+        run: |
+          DIFF=$(git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
+          echo "pr_diff<<EOF" >> $GITHUB_OUTPUT
+          echo "$DIFF" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Run Gemini CLI Code Review
+        id: gemini_review
+        uses: google-github-actions/run-gemini-cli@main
+        with:
+          prompt: "You are a senior software engineer. Please perform a code review on the following diff, checking for bugs, style issues, and potential improvements. Provide your feedback in a concise, bulleted list."
+          context: "${{ steps.pr_diff.outputs.pr_diff }}"
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `**Gemini AI Code Review**:\n\n${{ steps.gemini_review.outputs.result }}`
+            })
+```
+
+For detailed setup instructions, including how to configure authentication with Workload Identity Federation, please refer to the official repository: **[google-github-actions/run-gemini-cli](https://github.com/google-github-actions/run-gemini-cli)**.
+
+---
+
 ## A Note on Command Organization
+
 
 In this example, we have defined each slash command in its own `.toml` file within the `.gemini/commands/review/` directory. This is a great way to keep your `GEMINI.md` file clean and to manage complex commands with their own descriptions and long prompts.
 
