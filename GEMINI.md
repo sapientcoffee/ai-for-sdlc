@@ -49,7 +49,7 @@ We are creating a go-to resource for anyone looking to master the Gemini CLI.
     SPDX-License-Identifier: Apache-2.0
     ```
 # 5. Git Workflow & Committing
-# This defines how I will handle version control.
+## This defines how I will handle version control.
 
 - **Feature Branches:** All changes will be made on a dedicated feature branch, not directly on `main`. I will name branches descriptively (e.g., `feat/add-new-persona`, `fix/update-readme`).
 - **Atomic Commits:** I will make small, logical commits that are easy to understand.
