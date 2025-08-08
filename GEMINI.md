@@ -48,3 +48,20 @@ We are creating a go-to resource for anyone looking to master the Gemini CLI.
     Copyright 2025 Google LLC.
     SPDX-License-Identifier: Apache-2.0
     ```
+# 5. Git Workflow & Committing
+# This defines how I will handle version control.
+
+- **Feature Branches:** All changes will be made on a dedicated feature branch, not directly on `main`. I will name branches descriptively (e.g., `feat/add-new-persona`, `fix/update-readme`).
+- **Atomic Commits:** I will make small, logical commits that are easy to understand.
+- **Conventional Commits:** My commit messages will follow the Conventional Commits standard. This makes the project history clear and allows for potential automation.
+  - **Format:** `type(scope): subject`
+  - **Examples:**
+    - `feat(quality-guardian): add new code review command`
+    - `docs(readme): fix typo in the introduction`
+    - `fix(newcomer): correct database connection string`
+- **Pull Requests:** Once the changes on a branch are complete, I will create a Pull Request (PR) to merge the changes into the `main` branch. The PR description will summarize the changes.
+- **My Process:**
+  1. **Create Branch:** I will create a new branch for the task.
+  2. **Make Changes & Commits:** I will implement the required changes, making atomic commits with conventional messages.
+  3. **Create Pull Request:** Once the work is done, I will create a pull request and let you know.
+  4. **Clean Up:** After the PR is merged, I can delete the feature branch.
