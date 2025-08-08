@@ -1,41 +1,43 @@
-# 🧑‍✈️ 11. The Git Steward: Your Guardian of a Healthy Git History
+# 🧑‍✈️ 11. The Git Steward: Your AI Co-Developer
 
-Does your `git log` read like a mystery novel with a confusing plot? Do you dread having to unpick a feature that went wrong? This persona is your ticket to a clean, consistent, and powerfully simple git history.
+This persona transforms Gemini from a simple git enforcer into a true AI co-developer. It's inspired by best practices for AI-assisted coding, focusing on a structured, iterative workflow that combines human architectural guidance with AI implementation speed.
 
-## The Scenario
+## The Scenario: Beyond Simple Commits
 
-You're a developer on a fast-moving team. The pressure is on to ship features, but the git history is becoming a tangled mess. Commit messages are vague, massive changes are bundled into single commits, and understanding *why* a change was made requires a painful archeological dig.
+You're ready to move beyond just using an AI to *write* code. You want to partner with it to *build* features. You want to provide the high-level direction, have the AI handle the detailed implementation, and maintain a clean, professional git history throughout the process.
 
-Now, imagine adding AI agents to this mix. They're writing code, fixing bugs, and updating dependencies. How do you keep track of their work? How do you ensure you can safely review and, if necessary, revert their changes without causing chaos?
+This workflow is a direct answer to the question: "How do I effectively and safely use an AI agent to build software?"
 
-## The Gospel of Small, Atomic Commits
+## The Co-Developer Workflow: Plan, Implement, Test, Review
 
-This is where the Git Steward shines. It's built on a simple but profound principle: **your git history is one of your most valuable assets.**
+This persona introduces a powerful, multi-step workflow for feature development.
 
-### Why Small Commits are a Superpower
+### 1. `/git:plan "Your feature idea"`
+It all starts with a conversation. You provide a high-level description of the feature you want to build. The Git Steward, acting as an architect, takes your idea and creates a detailed `PLAN.md` file. This plan includes:
+- **The Goal:** A clear statement of the feature's purpose.
+- **Files to be Touched:** A list of all the files that will be created or modified.
+- **Implementation Steps:** A detailed, step-by-step checklist of the code to be written.
+- **Testing Strategy:** An outline of the tests needed to ensure quality.
 
-- **Effortless Reverts:** You highlighted this perfectly. Rolling back a single, focused commit that does one thing is trivial. Trying to revert a 1,000-line monster commit that touches ten files and three different features is a recipe for disaster. Small commits give you a "save point" for every logical change.
+**Why this is awesome:** This "human-in-the-loop" planning stage ensures that you, the developer, set the architectural direction. The AI's role is to flesh out the details, saving you time while keeping you in control.
 
-- **Crystal-Clear History:** When each commit has a single purpose and a clear message (thanks to Conventional Commits), your `git log` becomes a readable story of your project's evolution. It's not just a log; it's the ultimate documentation.
+### 2. `/git:implement`
+With the plan approved, the real magic begins. The Git Steward reads the `PLAN.md` and starts executing the implementation steps.
 
-- **Painless Code Reviews:** Reviewing a small, focused Pull Request is easy and can be done quickly and thoroughly. Reviewing a PR with dozens of unrelated commits is a chore that leads to rubber-stamping and missed bugs.
+Crucially, after each logical step, it makes a small, atomic, conventional commit.
 
-### The DORA Connection
+**Why this is awesome:** This is the "Gospel of Small Commits" in action. Instead of one giant, mysterious commit, you get a clean, easy-to-follow history of the feature's construction. Each commit is a logical unit of work, making it easy to review, understand, and, if necessary, revert.
 
-This isn't just about preference. The practices enforced by the Git Steward are directly linked to the metrics used by the DevOps Research and Assessment (DORA) group to identify high-performing teams. A clean history with small, revertible changes directly improves:
-- **Change Fail Rate:** When changes are small and isolated, they are less likely to cause failures.
-- **Mean Time to Recovery (MTTR):** If a failure does occur, `git revert` on a small commit is the fastest possible way to recover.
+### 3. `/git:test`
+Once the implementation is complete, the Git Steward switches hats to become a quality engineer. It reads the `PLAN.md` and the newly written code, and then generates the unit tests to verify the feature.
 
-### The Critical Role in an Agentic Workflow
+**Why this is awesome:** This ensures that testing is not an afterthought. By integrating test generation directly into the workflow, you maintain high code quality and test coverage.
 
-As AI agents become your new teammates, this discipline becomes **non-negotiable**. An agent might make dozens of changes a day. Without a strict, clean, and atomic commit history, you lose the ability to effectively supervise their work. Small, well-documented commits are the human-readable audit trail for an agent's actions, providing the safety net required to embrace AI-driven development with confidence.
+### 4. `/git:pr`
+With the feature implemented and tested, the final step is to share it with the team. This command creates a pull request, using the `PLAN.md` to intelligently pre-fill the title and body with a summary of the work.
 
-## The Persona
+**Why this is awesome:** This automates the final step of the development process, creating a clear and informative pull request that's easy for your teammates to review.
 
-As "The Git Steward," Gemini becomes your automated guardian, configured to:
-- **Enforce Conventional Commit messages:** No more "WIP" or "fixed stuff."
-- **Mandate Feature Branches:** Protect your `main` branch at all costs.
-- **Automate Pull Request creation:** Reduce the friction of sharing your work.
-- **Assist with Rebasing:** Help you keep your branches clean and up-to-date with `main`.
+## The Future of Development
 
-Let's transform your git history from a liability into your team's greatest strategic asset.
+This workflow represents a powerful new paradigm for software development, one where human creativity and AI-powered execution work in harmony. It's a structured, safe, and incredibly efficient way to build software, and it all rests on the foundation of a clean and disciplined git history.
