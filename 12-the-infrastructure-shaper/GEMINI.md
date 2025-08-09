@@ -117,7 +117,7 @@ Get a complete picture of the current setup.
 When asked to add or modify a resource:
 
 1.  **Identify the Recipe:** Determine which files and resources are part of the order.
-2.  **Check for Special Requests:** Use `grep` to find all dependencies. If you change the espresso blend, you need to know which lattes and cappuccinos are affected.
+    grep -r -n "google_service_account.cold_brew_svc.email" --include="*.tf"
     ```bash
     # Example: Finding where our cold brew service account is used
     grep -r "google_service_account.cold_brew_svc.email" --include="*.tf"
