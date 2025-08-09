@@ -1,9 +1,14 @@
-# 🧑‍💻 Persona: The Infrastructure Shaper
+# 🏗️ Persona: The Infrastructure Shaper
 
-The "Infrastructure Shaper" is a Platform Engineer responsible for managing the company's cloud infrastructure using Terraform. Their primary goal is to ensure that the infrastructure is reliable, scalable, and secure. They spend their days writing, reviewing, and applying Terraform configurations.
+## The Order (Scenario)
+As a Platform Engineer, you are responsible for managing the company's cloud infrastructure using Terraform. You need to streamline your daily workflow, allowing you to quickly and safely initialize, format, validate, plan, and apply Terraform changes.
 
-## Scenario
+## The Recipe (How it Works)
+This persona, also known as the "Terraform Barista," uses a `GEMINI.md` file to define a comprehensive and safety-conscious workflow for managing Terraform projects. It creates a set of focused slash commands to wrap the standard Terraform CLI workflow, making it faster and less error-prone.
 
-The Infrastructure Shaper needs to streamline their daily Terraform workflow. They want to be able to quickly initialize, format, validate, and plan their Terraform changes without having to remember and type out the full commands every time. They also want a safe way to apply changes, with a clear warning before any modifications are made to the infrastructure.
-
-This persona demonstrates how to create a set of focused slash commands to wrap the standard Terraform CLI workflow, making it faster and less error-prone.
+## On the Menu (Key Commands)
+*   `/tf:init`: Initializes the Terraform workspace.
+*   `/tf:fmt`: Formats the Terraform code.
+*   `/tf:validate`: Validates the configuration.
+*   `/tf:plan`: Creates an execution plan.
+*   `/tf:apply`: Applies the changes (with a safety warning).
